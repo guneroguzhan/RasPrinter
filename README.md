@@ -74,6 +74,7 @@ sudo systemctl restar smbd
 - Ek olarak; 
 Bu tarz bir proje için Raspberry Pi cihazımızın Boot süresini hızlandırmamız verimlilik açısından faydalı olacaktır. Bütün kurulumları yaptıktan sonra ihtiyaç duyulmayan sistem servisleri kapatılarak bu süreden kazanç sağlanacaktır.
 
+***Boot süresi kısaltmak ve CPU clock frekansını artırmak için birkaç örnek;***
 
 ```
 systemd-analyze
