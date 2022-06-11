@@ -1,6 +1,8 @@
 # RasPrinter
 ## Kablolu Bağlantılı Yazıcıların Kablosuz Bağlantı Sunucusu ile Sürdürülebilir Kullanımının Sağlanması
 
+Bu proje [Dr. Öğr. Üyesi Serkan Aydın](https://avesis.marmara.edu.tr/serkan.aydin)'ın Gömülü Sistemler ve Mobil Uygulamalar dersi için geliştirilmiştir.
+
 **Raspberry Pi Zero 2 Wifi cihazına CUPS ve Samba Server Kurulumu**
 
 ![pi-printer](https://user-images.githubusercontent.com/107308122/173188764-3f867339-1203-423b-b5d1-a9c4a2a3e1fa.png)
@@ -126,5 +128,3 @@ noipv6
 
 ![Ekran Resmi 2022-06-11 19 59 20](https://user-images.githubusercontent.com/107308122/173197506-fedf9278-643c-4452-8a83-04d55c073cbc.png)
 
-
-Bu proje [Dr. Öğretim Üyesi Serkan Aydın](https://avesis.marmara.edu.tr/serkan.aydin) 'ın Gömülü Sistemler ve Mobil Uygulamalar dersi için geliştirilmiştir.
