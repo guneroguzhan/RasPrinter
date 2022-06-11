@@ -15,7 +15,7 @@ CUPS, Apple Inc. tarafından macOS® ve diğer UNIX® benzeri işletim sistemler
 
 Ek olarak, CUPS yazıcı yeteneklerini ve özelliklerini tanımlamak için PostScript Yazıcı Tanımı ("PPD") dosyalarını ve birçok dosya türünü dönüştürmek ve yazdırmak için çok çeşitli genel ve aygıta özgü programları kullanır. Birçok Dymo, EPSON, HP, Intellitech, OKIDATA ve Zebra yazıcıyı desteklemek için CUPS içerisinde örnek sürücüler de dahildir.
 
-Bu proje dahilinde CUPS bizim yazıcı sunucumuz olarak çalışacaktır.
+Bu proje dahilinde CUPS bizim yazıcı sunucumuz olarak çalışacaktır. Aynı zamanda bu sunucu AirPrint desteği ile mobil cihazlar üzerinden yazıcılara kablosuz erişimi de desteklemektedir.
 
 ![linux_print1](https://user-images.githubusercontent.com/107308122/173192386-49ce7290-344e-48cb-b2f1-97d7972ede41.gif)
 
