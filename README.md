@@ -30,6 +30,5 @@ Biz de bu projede Samba Server'ı CUPS ile kurduğumuz print server'ın Windows 
 
 **Gerekli Diğer Kurulumlar**
 - Raspberry PI OS kurulumu: Bu kısımda  **Debian Buster** tercih edildi.
-
-Ek olarak; 
+- Ek olarak; 
 Bu tarz bir proje için Raspberry Pi cihazımızın Boot süresini hızlandırmamız verimlilik açısından faydalı olacaktır. Bütün kurulumları yaptıktan sonra ihtiyaç duyulmayan sistem servisleri kapatılarak bu süreden kazanç sağlanacaktır.
