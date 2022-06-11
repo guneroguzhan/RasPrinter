@@ -104,3 +104,24 @@ noipv6
 >*Bütün bu işlemler sonucunda **"Startup finished in 4.343s (kernel) + 19.888s (userspace) = 24.232s graphical target reached after 19.786s in userspace"** olarak cevap dönmüştür*
 >Özet olarak basit bir iki işlemle bile total boot süresini **4.729s** azaltmış olduk.
 -------------------------------------------------------------------------
+
+
+**iOS platformunda deneme**
+
+![Ekran Resmi 2022-06-11 20 00 01](https://user-images.githubusercontent.com/107308122/173197447-a8377722-e176-4998-a986-0bbc95b21ef0.png)![Ekran Resmi 2022-06-11 20 00 16](https://user-images.githubusercontent.com/107308122/173197450-5929ba32-521c-4861-9b3c-170eba28293f.png)
+
+-------------------------------------------------------------------------
+
+**MacOS platformunda deneme**
+
+![Ekran Resmi 2022-06-11 19 59 33](https://user-images.githubusercontent.com/107308122/173197467-f7500890-67ff-4c4c-ba16-39bea028351a.png)
+![Ekran Resmi 2022-06-11 20 02 28](https://user-images.githubusercontent.com/107308122/173197482-1ccb32b3-c96c-417e-a4fc-83ddc425bbce.png)
+
+-------------------------------------------------------------------------
+
+**Windows platformunda deneme**
+
+![Ekran Resmi 2022-06-11 19 59 20](https://user-images.githubusercontent.com/107308122/173197506-fedf9278-643c-4452-8a83-04d55c073cbc.png)
+
+
+
