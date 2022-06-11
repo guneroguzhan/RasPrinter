@@ -71,3 +71,36 @@ sudo systemctl restar smbd
 - Raspberry PI OS kurulumu: Bu kısımda  **Debian Buster** tercih edildi.
 - Ek olarak; 
 Bu tarz bir proje için Raspberry Pi cihazımızın Boot süresini hızlandırmamız verimlilik açısından faydalı olacaktır. Bütün kurulumları yaptıktan sonra ihtiyaç duyulmayan sistem servisleri kapatılarak bu süreden kazanç sağlanacaktır.
+
+
+```
+systemd-analyze
+```
+>Bu komut Raspberry cihazımızın Startup süresinin, **kernel + userspace** olacak şekilde, ne kadar olduğunu gösterecektir.
+>*Benim sistemim için bu komut **"Startup finished in 5.185s (kernel) + 23.775s (userspace) = 28.961s graphical target reached after 23.702s in userspace"** olarak cevap dönmüştür* 
+-------------------------------------------------------------------------
+
+
+```
+systemd-analyze blame
+```
+>Bu komut Raspberry cihazımızın Startup sürecinde servislerin her birinin ne kadar süre kullanımı olduğunu gösterecektir.
+>Bu liste içerisinden projemiz için ihtiyaç duymadığımız servisleri seçerek kapatabiliriz.
+-------------------------------------------------------------------------
+```
+sudo nano /boot/config.txt
+```
+>Bu kısımda config.txt dosyası açılır ve içerisinde yer alan **uncomment to overclock the arm. 700Mhz is the default** yazan bölümünde **over_voltage = 2, arm_freq=1000, boot_delay=0** olacak şekilde değiştirilerek kaydedilir.
+-------------------------------------------------------------------------
+```
+sudo nano /etc/dhcpcd.conf
+```
+>Bu kısımda dhcpcd.conf dosyası açılır ve içerisinde en alttaki boş kısma aşağıdakiler yazılarak kaydedilir.
+```
+noarp
+ipv4only
+noipv6
+```
+>*Bütün bu işlemler sonucunda **"Startup finished in 4.343s (kernel) + 19.888s (userspace) = 24.232s graphical target reached after 19.786s in userspace"** olarak cevap dönmüştür*
+>Özet olarak basit bir iki işlemle bile total boot süresini **4.729s** azaltmış olduk.
+-------------------------------------------------------------------------
