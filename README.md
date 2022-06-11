@@ -1,7 +1,7 @@
 # RasPrinter
 ## Kablolu Bağlantılı Yazıcıların Kablosuz Bağlantı Sunucusu ile Sürdürülebilir Kullanımının Sağlanması
 
-**Raspberry Pi Printer ve Samba Server Kurulumu**
+**Raspberry Pi Zero 2 Wifi cihazına CUPS ve Samba Server Kurulumu**
 
 ![pi-printer](https://user-images.githubusercontent.com/107308122/173188764-3f867339-1203-423b-b5d1-a9c4a2a3e1fa.png)
 
