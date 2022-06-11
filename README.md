@@ -49,6 +49,8 @@ Samba, Linux ve Unix için standart Windows birlikte çalışabilirlik programı
 
 Biz de bu projede Samba Server'ı CUPS ile kurduğumuz print server'ın Windows işletim sistemine sahip bilgisayarlar tarafından da görülmesini sağlamak için kullanacağız.
 
+***Samba Server Kurulum adımları;***
+
 ```
 sudo apt-get install samba
 ```
