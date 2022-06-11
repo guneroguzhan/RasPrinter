@@ -1,7 +1,7 @@
 # RasPrinter
-Raspberry Pi Printer ve Samba Server Kurulumu
+## Kablolu Bağlantılı Yazıcıların Kablosuz Bağlantı Sunucusu ile Sürdürülebilir Kullanımının Sağlanması
 
-**Kablolu Bağlantılı Yazıcıların Kablosuz Bağlantı Sunucusu ile Sürdürülebilir Kullanımının Sağlanması**
+**Raspberry Pi Printer ve Samba Server Kurulumu**
 
 ![pi-printer](https://user-images.githubusercontent.com/107308122/173188764-3f867339-1203-423b-b5d1-a9c4a2a3e1fa.png)
 
@@ -19,12 +19,51 @@ Bu proje dahilinde CUPS bizim yazıcı sunucumuz olarak çalışacaktır.
 
 ![linux_print1](https://user-images.githubusercontent.com/107308122/173192386-49ce7290-344e-48cb-b2f1-97d7972ede41.gif)
 
+***CUPS Kurulum adımları;***
+
+```
+sudo apt update
+sudo apt-get install cups
+```
+>Bu kısımda güncelleme olup olmadığını denetledikten sonra CUPS kurulumu için talepte bulunmuş olduk 
+-------------------------------------------------------------------------
+```
+sudo usermod -a -G lpadmin pi
+```
+>Bu kısımda pi kullanıcısını admin olarak tanımladık
+-------------------------------------------------------------------------
+```
+sudo cupsctl --remote-any
+```
+>Bu kısımda CUPS'ı remote bağlantı için erişilebilir yaptık
+-------------------------------------------------------------------------
+```
+sudo etc/init.d/cups restart
+```
+>Ve son olarak CUPS'ı yeniden başlatarak bütün güncel ayarlarımızın çalışmasını sağladık
+-------------------------------------------------------------------------
 
 **SMB: SAMBA Server**
 
 Samba, Linux ve Unix için standart Windows birlikte çalışabilirlik programıdır. Samba, GNU General Public License altında lisanslanmış Özgür Yazılımdır. 1992'den beri Samba, DOS ve Windows'un tüm sürümleri, OS/2, Linux ve diğerleri gibi SMB/CIFS protokolünü kullanan tüm istemciler için güvenli, istikrarlı ve hızlı dosya ve baskı hizmetleri sağlamıştır. Samba, Linux/Unix Sunucularını ve Masaüstlerini Active Directory ortamlarına sorunsuz bir şekilde entegre etmek için önemli bir bileşendir. Hem etki alanı denetleyicisi hem de normal etki alanı üyesi olarak işlev görebilir. 
 
 Biz de bu projede Samba Server'ı CUPS ile kurduğumuz print server'ın Windows işletim sistemine sahip bilgisayarlar tarafından da görülmesini sağlamak için kullanacağız.
+
+```
+sudo apt-get install samba
+```
+>Bu kısımda Samba Server kurulumu için talepte bulunmuş olduk 
+-------------------------------------------------------------------------
+```
+sudo nano etc/samba/smb.conf
+```
+>Bu kısımda smb.conf dosyası açılır ve içerisinde yer alan **[printers]** bölümündeki **guest ok = no -> yes** ile **read only = yes -> no** ile değiştirilerek kaydedilir 
+-------------------------------------------------------------------------
+```
+sudo systemctl restar smbd
+```
+>Ve son olarak Samba Server'ı yeniden başlatarak bütün güncel ayarlarımızın çalışmasını sağladık
+-------------------------------------------------------------------------
 
 ![samba1](https://user-images.githubusercontent.com/107308122/173192394-0ff1ff27-a6e4-44ad-b3fc-bc009844b541.png)
 
