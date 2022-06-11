@@ -127,4 +127,4 @@ noipv6
 ![Ekran Resmi 2022-06-11 19 59 20](https://user-images.githubusercontent.com/107308122/173197506-fedf9278-643c-4452-8a83-04d55c073cbc.png)
 
 
-
+Bu proje [Dr. Öğretim Üyesi Serkan Aydın](https://avesis.marmara.edu.tr/serkan.aydin) 'ın Gömülü Sistemler ve Mobil Uygulamalar dersi için geliştirilmiştir.
